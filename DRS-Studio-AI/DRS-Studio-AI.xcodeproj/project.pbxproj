@@ -1,0 +1,589 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		3004678E2D66C3DF00F31580 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 300467722D66C3DE00F31580 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 300467792D66C3DE00F31580;
+			remoteInfo = "DRS-Studio-AI";
+		};
+		300467982D66C3DF00F31580 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 300467722D66C3DE00F31580 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 300467792D66C3DE00F31580;
+			remoteInfo = "DRS-Studio-AI";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3004677A2D66C3DE00F31580 /* DRS-Studio-AI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DRS-Studio-AI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3004678D2D66C3DF00F31580 /* DRS-Studio-AITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DRS-Studio-AITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		300467972D66C3DF00F31580 /* DRS-Studio-AIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DRS-Studio-AIUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		3004677C2D66C3DE00F31580 /* DRS-Studio-AI */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "DRS-Studio-AI";
+			sourceTree = "<group>";
+		};
+		300467902D66C3DF00F31580 /* DRS-Studio-AITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "DRS-Studio-AITests";
+			sourceTree = "<group>";
+		};
+		3004679A2D66C3DF00F31580 /* DRS-Studio-AIUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "DRS-Studio-AIUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		300467772D66C3DE00F31580 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3004678A2D66C3DF00F31580 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		300467942D66C3DF00F31580 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		300467712D66C3DE00F31580 = {
+			isa = PBXGroup;
+			children = (
+				3004677C2D66C3DE00F31580 /* DRS-Studio-AI */,
+				300467902D66C3DF00F31580 /* DRS-Studio-AITests */,
+				3004679A2D66C3DF00F31580 /* DRS-Studio-AIUITests */,
+				3004677B2D66C3DE00F31580 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3004677B2D66C3DE00F31580 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3004677A2D66C3DE00F31580 /* DRS-Studio-AI.app */,
+				3004678D2D66C3DF00F31580 /* DRS-Studio-AITests.xctest */,
+				300467972D66C3DF00F31580 /* DRS-Studio-AIUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		300467792D66C3DE00F31580 /* DRS-Studio-AI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 300467A12D66C3DF00F31580 /* Build configuration list for PBXNativeTarget "DRS-Studio-AI" */;
+			buildPhases = (
+				300467762D66C3DE00F31580 /* Sources */,
+				300467772D66C3DE00F31580 /* Frameworks */,
+				300467782D66C3DE00F31580 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				3004677C2D66C3DE00F31580 /* DRS-Studio-AI */,
+			);
+			name = "DRS-Studio-AI";
+			packageProductDependencies = (
+			);
+			productName = "DRS-Studio-AI";
+			productReference = 3004677A2D66C3DE00F31580 /* DRS-Studio-AI.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3004678C2D66C3DF00F31580 /* DRS-Studio-AITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 300467A42D66C3DF00F31580 /* Build configuration list for PBXNativeTarget "DRS-Studio-AITests" */;
+			buildPhases = (
+				300467892D66C3DF00F31580 /* Sources */,
+				3004678A2D66C3DF00F31580 /* Frameworks */,
+				3004678B2D66C3DF00F31580 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3004678F2D66C3DF00F31580 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				300467902D66C3DF00F31580 /* DRS-Studio-AITests */,
+			);
+			name = "DRS-Studio-AITests";
+			packageProductDependencies = (
+			);
+			productName = "DRS-Studio-AITests";
+			productReference = 3004678D2D66C3DF00F31580 /* DRS-Studio-AITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		300467962D66C3DF00F31580 /* DRS-Studio-AIUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 300467A72D66C3DF00F31580 /* Build configuration list for PBXNativeTarget "DRS-Studio-AIUITests" */;
+			buildPhases = (
+				300467932D66C3DF00F31580 /* Sources */,
+				300467942D66C3DF00F31580 /* Frameworks */,
+				300467952D66C3DF00F31580 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				300467992D66C3DF00F31580 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				3004679A2D66C3DF00F31580 /* DRS-Studio-AIUITests */,
+			);
+			name = "DRS-Studio-AIUITests";
+			packageProductDependencies = (
+			);
+			productName = "DRS-Studio-AIUITests";
+			productReference = 300467972D66C3DF00F31580 /* DRS-Studio-AIUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		300467722D66C3DE00F31580 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1620;
+				LastUpgradeCheck = 1620;
+				TargetAttributes = {
+					300467792D66C3DE00F31580 = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					3004678C2D66C3DF00F31580 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 300467792D66C3DE00F31580;
+					};
+					300467962D66C3DF00F31580 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 300467792D66C3DE00F31580;
+					};
+				};
+			};
+			buildConfigurationList = 300467752D66C3DE00F31580 /* Build configuration list for PBXProject "DRS-Studio-AI" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 300467712D66C3DE00F31580;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				3033BF7A2D7BF5E000B6ED67 /* XCRemoteSwiftPackageReference "swiftdocs" */,
+				3033BF7B2D7BF7B200B6ED67 /* XCRemoteSwiftPackageReference "docx-parser" */,
+				3033BFA02D7BF94900B6ED67 /* XCRemoteSwiftPackageReference "SwiftKit" */,
+				30B39EAF2D7C067B00574AC7 /* XCRemoteSwiftPackageReference "DocX" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 3004677B2D66C3DE00F31580 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				300467792D66C3DE00F31580 /* DRS-Studio-AI */,
+				3004678C2D66C3DF00F31580 /* DRS-Studio-AITests */,
+				300467962D66C3DF00F31580 /* DRS-Studio-AIUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		300467782D66C3DE00F31580 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3004678B2D66C3DF00F31580 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		300467952D66C3DF00F31580 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		300467762D66C3DE00F31580 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		300467892D66C3DF00F31580 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		300467932D66C3DF00F31580 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3004678F2D66C3DF00F31580 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 300467792D66C3DE00F31580 /* DRS-Studio-AI */;
+			targetProxy = 3004678E2D66C3DF00F31580 /* PBXContainerItemProxy */;
+		};
+		300467992D66C3DF00F31580 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 300467792D66C3DE00F31580 /* DRS-Studio-AI */;
+			targetProxy = 300467982D66C3DF00F31580 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3004679F2D66C3DF00F31580 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		300467A02D66C3DF00F31580 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		300467A22D66C3DF00F31580 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "DRS-Studio-AI/DRS_Studio_AI.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"DRS-Studio-AI/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "home.DRS-Studio-AI";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		300467A32D66C3DF00F31580 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "DRS-Studio-AI/DRS_Studio_AI.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"DRS-Studio-AI/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "home.DRS-Studio-AI";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		300467A52D66C3DF00F31580 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "home.DRS-Studio-AITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DRS-Studio-AI.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DRS-Studio-AI";
+			};
+			name = Debug;
+		};
+		300467A62D66C3DF00F31580 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "home.DRS-Studio-AITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DRS-Studio-AI.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DRS-Studio-AI";
+			};
+			name = Release;
+		};
+		300467A82D66C3DF00F31580 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "home.DRS-Studio-AIUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "DRS-Studio-AI";
+			};
+			name = Debug;
+		};
+		300467A92D66C3DF00F31580 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "home.DRS-Studio-AIUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "DRS-Studio-AI";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		300467752D66C3DE00F31580 /* Build configuration list for PBXProject "DRS-Studio-AI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3004679F2D66C3DF00F31580 /* Debug */,
+				300467A02D66C3DF00F31580 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		300467A12D66C3DF00F31580 /* Build configuration list for PBXNativeTarget "DRS-Studio-AI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				300467A22D66C3DF00F31580 /* Debug */,
+				300467A32D66C3DF00F31580 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		300467A42D66C3DF00F31580 /* Build configuration list for PBXNativeTarget "DRS-Studio-AITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				300467A52D66C3DF00F31580 /* Debug */,
+				300467A62D66C3DF00F31580 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		300467A72D66C3DF00F31580 /* Build configuration list for PBXNativeTarget "DRS-Studio-AIUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				300467A82D66C3DF00F31580 /* Debug */,
+				300467A92D66C3DF00F31580 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3033BF7A2D7BF5E000B6ED67 /* XCRemoteSwiftPackageReference "swiftdocs" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/imjyotiraditya/swiftdocs";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		3033BF7B2D7BF7B200B6ED67 /* XCRemoteSwiftPackageReference "docx-parser" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/erikvullings/docx-parser";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		3033BFA02D7BF94900B6ED67 /* XCRemoteSwiftPackageReference "SwiftKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/JohnSundell/SwiftKit";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		30B39EAF2D7C067B00574AC7 /* XCRemoteSwiftPackageReference "DocX" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/shinjukunian/DocX.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.8.8;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+	};
+	rootObject = 300467722D66C3DE00F31580 /* Project object */;
+}

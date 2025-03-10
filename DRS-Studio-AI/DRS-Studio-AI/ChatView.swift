@@ -39,7 +39,7 @@ struct DocumentContext {
 }
 
 enum AppTheme: String, CaseIterable {
-    case light = "Light"
+    case yellow = "Yellow"
     case dark = "Dark"
     case blue = "Blue"
     case green = "Green"
@@ -47,8 +47,8 @@ enum AppTheme: String, CaseIterable {
 
     var color: Color {
         switch self {
-        case .light:
-            return Color.white
+        case .yellow:
+            return Color.yellow.opacity(0.1)
         case .dark:
             return Color.black
         case .blue:
@@ -78,7 +78,7 @@ struct ChatView: View {
         }
     }
 
-    @AppStorage("selectedTheme") private var selectedTheme: AppTheme = .light
+    @AppStorage("selectedTheme") private var selectedTheme: AppTheme = .yellow
     @AppStorage("ollamaServerURL") private var serverURL = "http://localhost:11434"
     @AppStorage("bingSearchEnabled") private var bingSearchEnabled = false
     @Environment(\.dismiss) private var dismiss

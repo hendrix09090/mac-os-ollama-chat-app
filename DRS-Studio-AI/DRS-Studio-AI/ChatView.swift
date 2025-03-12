@@ -44,6 +44,11 @@ enum AppTheme: String, CaseIterable {
     case blue = "Blue"
     case green = "Green"
     case red = "Red"
+    case purple = "Purple"
+    case orange = "Orange"
+    case teal = "Teal"
+    case pink = "Pink"
+    case brown = "Brown"
 
     var color: Color {
         switch self {
@@ -57,6 +62,16 @@ enum AppTheme: String, CaseIterable {
             return Color.green.opacity(0.1)
         case .red:
             return Color.red.opacity(0.1)
+        case .purple:
+            return Color.purple.opacity(0.1)
+        case .orange:
+            return Color.orange.opacity(0.1)
+        case .teal:
+            return Color.teal.opacity(0.1)
+        case .pink:
+            return Color.pink.opacity(0.1)
+        case .brown:
+            return Color.brown.opacity(0.1)
         }
     }
 }
@@ -99,6 +114,8 @@ struct ChatView: View {
     @State private var shouldStopGeneration = false
     private let maxRetries = 3
     private let retryDelay: TimeInterval = 2.0
+    @State private var wordCountInput: String = ""
+    @State private var showWordCountPrompt: Bool = false
     
     var body: some View {
         VStack {
@@ -109,7 +126,7 @@ struct ChatView: View {
                         Text(theme.rawValue).tag(theme)
                     }
                 }
-                .pickerStyle(SegmentedPickerStyle())
+                .pickerStyle(MenuPickerStyle())
                 
                 // Add Bing Search Toggle
                 Toggle(isOn: $bingSearchEnabled) {
@@ -287,6 +304,20 @@ struct ChatView: View {
         }
         .background(WindowAccessor())
         #endif
+        .alert("Word Count", isPresented: $showWordCountPrompt) {
+            TextField("Enter desired word count", text: $wordCountInput)
+                .keyboardType(.numberPad) // Set keyboard type to number pad
+            Button("OK") {
+                if let wordCount = Int(wordCountInput), wordCount > 0 {
+                    // Call the function to generate the chapter with the specified word count
+                    generateChapter(with: wordCount)
+                } else {
+                    // Handle invalid input (e.g., show an error message)
+                    responses.append(Message(content: "❌ Please enter a valid positive number.", timestamp: Date(), isUser: false))
+                }
+            }
+            Button("Cancel", role: .cancel) { }
+        }
     }
     
     private func checkServerConnection() {
@@ -819,12 +850,17 @@ struct ChatView: View {
         isGeneratingChapter = true
         isThinking = true
         
+        // Ask for the desired word count
+        let wordCountPrompt = "How many words should the chapter be?"
+        // Here you would implement a way to get user input, for example using a TextField or an alert
+        getUserInput(prompt: wordCountPrompt) // Placeholder for user input method
+        
         let sectionTemplate = context.documentType.defaultSections
             .map { "- " + $0 }
             .joined(separator: "\n")
         
         let chapterPrompt = """
-        Based on the following document context, generate Chapter \(context.chapterCount) that maintains the same:
+        Based on the following document context, generate Chapter \(context.chapterCount) with approximately \(wordCountInput) words that maintains the same:
         - Writing style and tone
         - Theme consistency
         - Character voices (if applicable)
@@ -883,6 +919,158 @@ struct ChatView: View {
                 responses.append(Message(content: "❌ Error generating chapter: \(errorMessage)", timestamp: Date(), isUser: false))
             }
         }
+    }
+
+    private func getUserInput(prompt: String) {
+        wordCountInput = "" // Reset the input field
+        showWordCountPrompt = true // Show the alert
+    }
+
+    private func generateChapter(with wordCount: Int) {
+        guard var context = currentDocumentContext else { return }
+        
+        shouldStopGeneration = false
+        context.chapterCount += 1
+        lastGeneratedChapterNumber = context.chapterCount
+        currentDocumentContext = context
+        
+        isGeneratingChapter = true
+        isThinking = true
+        
+        // Construct the chapter prompt using a separate function
+        let chapterPrompt = buildChapterPrompt(for: context, wordCount: wordCount)
+        
+        NetworkManager.shared.sendMessage(
+            chapterPrompt,
+            serverURL: serverURL,
+            model: selectedModel?.name ?? "codellama"
+        ) { result in
+            isGeneratingChapter = false
+            isThinking = false
+            
+            switch result {
+            case .success(let response):
+                // Format the chapter response
+                let formattedChapter = """
+                📖 Generated Chapter \(self.lastGeneratedChapterNumber):
+                
+                \(response)
+                
+                ---
+                Chapter generated based on:
+                - Document Type: \(context.documentType)
+                - Themes: \(context.keyThemes.joined(separator: ", "))
+                - Sections: \(context.documentType.defaultSections.joined(separator: " → "))
+                """
+                responses.append(Message(content: formattedChapter, timestamp: Date(), isUser: false))
+                
+            case .failure(let error):
+                let errorMessage = NetworkManager.shared.handleNetworkError(error)
+                responses.append(Message(content: "❌ Error generating chapter: \(errorMessage)", timestamp: Date(), isUser: false))
+            }
+        }
+    }
+
+    // Define constants for static parts of the prompt
+    private let chapterHeaderTemplate = """
+    Based on the following document context, generate Chapter %d with approximately %d words that maintains the same:
+    - Writing style and tone
+    - Theme consistency
+    - Character voices (if applicable)
+    - World-building elements
+    - Technical depth (for technical documents)
+    """
+
+    private let chapterStructureTemplate = """
+    Chapter Structure:
+    Please organize the chapter using these sections:
+    %s
+    """
+
+    private let guidelinesTemplate = """
+    Guidelines:
+    1. Start with "Chapter %d:" followed by a compelling title
+    2. Include all sections listed above, maintaining document type appropriate formatting
+    3. Maintain consistent terminology and concepts
+    4. Follow the established narrative or technical style
+    5. Build upon existing themes: %s
+    6. Ensure continuity with the original content
+    7. Match the complexity level of the original document
+    """
+
+    private let originalContentSummaryTemplate = """
+    Original Content Summary:
+    %s
+    """
+
+    private let chapterConclusionTemplate = """
+    Please generate Chapter %d that seamlessly extends this content while maintaining its core characteristics.
+    Format the chapter with clear section headings and appropriate transitions between sections.
+    """
+
+    private let documentTypeDescriptionTemplate = "Document Type: %@"
+    private let keyThemesDescriptionTemplate = "Key Themes: %@"
+
+    private func buildChapterPrompt(for context: DocumentContext, wordCount: Int) -> String {
+        let sectionTemplate = buildSectionTemplate(for: context)
+        
+        // Break down the chapter prompt into even smaller components
+        let chapterHeader = buildChapterHeader(for: context, wordCount: wordCount)
+        let documentTypeDescription = buildDocumentTypeDescription(for: context)
+        let keyThemesDescription = buildKeyThemesDescription(for: context)
+        
+        let chapterStructure = buildChapterStructure(for: context, sectionTemplate: sectionTemplate)
+        let guidelines = buildGuidelines(for: context)
+        let originalContentSummary = buildOriginalContentSummary(for: context)
+        let chapterConclusion = buildChapterConclusion(for: context)
+        
+        // Construct the chapter prompt by concatenating smaller components
+        return [
+            chapterHeader,
+            documentTypeDescription,
+            keyThemesDescription,
+            chapterStructure,
+            guidelines,
+            originalContentSummary,
+            chapterConclusion
+        ].joined(separator: "\n\n")
+    }
+
+    // Separate functions to build each component
+    private func buildSectionTemplate(for context: DocumentContext) -> String {
+        context.documentType.defaultSections
+            .map { "- " + $0 }
+            .joined(separator: "\n")
+    }
+
+    private func buildChapterHeader(for context: DocumentContext, wordCount: Int) -> String {
+        String(format: chapterHeaderTemplate, context.chapterCount, wordCount)
+    }
+
+    private func buildDocumentTypeDescription(for context: DocumentContext) -> String {
+        String(format: documentTypeDescriptionTemplate, String(describing: context.documentType))
+    }
+
+    private func buildKeyThemesDescription(for context: DocumentContext) -> String {
+        String(format: keyThemesDescriptionTemplate, context.keyThemes.joined(separator: ", "))
+    }
+
+    private func buildChapterStructure(for context: DocumentContext, sectionTemplate: String) -> String {
+        String(format: chapterStructureTemplate, sectionTemplate)
+    }
+
+    private func buildGuidelines(for context: DocumentContext) -> String {
+        String(format: guidelinesTemplate, context.chapterCount, context.keyThemes.joined(separator: ", "))
+    }
+
+    private func buildOriginalContentSummary(for context: DocumentContext) -> String {
+        let contentPrefix = String(context.content.prefix(500))
+        return String(format: originalContentSummaryTemplate, contentPrefix)
+    }
+
+    private func buildChapterConclusion(for context: DocumentContext) -> String {
+        let chapterNumber = context.chapterCount
+        return String(format: chapterConclusionTemplate, chapterNumber)
     }
 }
 

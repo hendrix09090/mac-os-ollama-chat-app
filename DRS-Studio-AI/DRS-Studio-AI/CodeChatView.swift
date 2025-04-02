@@ -238,4 +238,42 @@ struct CodePreviewView: View {
         .navigationTitle("Code Changes")
         .frame(minWidth: 800, minHeight: 600)
     }
+}
+
+enum AppTheme: String, CaseIterable {
+    case yellow = "Yellow"
+    case dark = "Dark"
+    case blue = "Blue"
+    case green = "Green"
+    case red = "Red"
+    case purple = "Purple"
+    case orange = "Orange"
+    case teal = "Teal"
+    case pink = "Pink"
+    case brown = "Brown"
+
+    var color: Color {
+        switch self {
+        case .yellow:
+            return Color.yellow.opacity(0.1)
+        case .dark:
+            return Color.black
+        case .blue:
+            return Color.blue.opacity(0.1)
+        case .green:
+            return Color.green.opacity(0.1)
+        case .red:
+            return Color.red.opacity(0.1)
+        case .purple:
+            return Color.purple.opacity(0.1)
+        case .orange:
+            return Color.orange.opacity(0.1)
+        case .teal:
+            return Color.teal.opacity(0.1)
+        case .pink:
+            return Color.pink.opacity(0.1)
+        case .brown:
+            return Color.brown.opacity(0.1)
+        }
+    }
 } 

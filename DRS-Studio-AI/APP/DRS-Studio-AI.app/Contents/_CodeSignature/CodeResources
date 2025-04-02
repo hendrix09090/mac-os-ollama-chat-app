@@ -10,32 +10,122 @@
 		</data>
 		<key>Resources/Assets.car</key>
 		<data>
-		eadcXWYPZ0+7XMD1GuovbTLrWqY=
+		LDIQPFYY9Bx9WHbUANO67oQbMss=
 		</data>
 		<key>Resources/Info.plist</key>
 		<data>
-		l/mF5DUHsB3QrgT23ACxS0gJHGw=
+		Cpf+CW393cvprnYeWgdWvu30kRQ=
 		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>Frameworks/Testing.framework</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			WUlTd+LrypfkltAF614iYt7oZc4=
+			</data>
+			<key>requirement</key>
+			<string>cdhash H"59495377e2ebca97e496d005eb5e2262dee865ce" or cdhash H"f5351509aebdd580669ac45969e9ae8342c91ba0" or cdhash H"708c9bc41855b1422c9b27ccd02c8233b6b937e5"</string>
+		</dict>
+		<key>Frameworks/XCTAutomationSupport.framework</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			B4vZmKwDPoHqQUBABB5Sg7kHtAo=
+			</data>
+			<key>requirement</key>
+			<string>cdhash H"078bd998ac033e81ea414040041e5283b907b40a" or cdhash H"2136e59121cc2426498385d333c70e59e6847e74" or cdhash H"46406e41aa79b0d0fe5b8787b183640073ee98d4"</string>
+		</dict>
+		<key>Frameworks/XCTest.framework</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			DnhgkfAUSFS5hCllMxsnKKaA/HA=
+			</data>
+			<key>requirement</key>
+			<string>cdhash H"0e786091f0144854b9842965331b2728a680fc70" or cdhash H"dc6c9569a6b0af9f93438392a78f78f877dbc239" or cdhash H"7b1e57c627acc6d55479886ebaecc1966eb5e27d"</string>
+		</dict>
+		<key>Frameworks/XCTestCore.framework</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			0N36DOnTQEw1MYWbKpc8psOdyGs=
+			</data>
+			<key>requirement</key>
+			<string>cdhash H"d0ddfa0ce9d3404c3531859b2a973ca6c39dc86b" or cdhash H"3de3d74b2fcf09ec961e5c7de45ed28f7f8df211" or cdhash H"ec53b969c9b1af6d20d5b86617275f3814e75299"</string>
+		</dict>
+		<key>Frameworks/XCTestSupport.framework</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			ZJwRqtoSK9XhxGLlZb2Wiec+2/c=
+			</data>
+			<key>requirement</key>
+			<string>cdhash H"649c11aada122bd5e1c462e565bd9689e73edbf7" or cdhash H"8149d3151474e63367e6bcf302643971a400cfd0" or cdhash H"b6104838afb6cf7e028062bef47e76cc4d269e07"</string>
+		</dict>
+		<key>Frameworks/XCUIAutomation.framework</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			0lLJ6LwoZQljXTCBodrGShSPcGc=
+			</data>
+			<key>requirement</key>
+			<string>cdhash H"d252c9e8bc286509635d3081a1dac64a148f7067" or cdhash H"2d021eaac2b7446cef5fd622aa6ee46f3dc0c9a6" or cdhash H"ed848101e23c5a9d60a479710238dc66f649de64"</string>
+		</dict>
+		<key>Frameworks/XCUnit.framework</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			NhPsrO3kDk2nlQhh+lU+JIlaoWE=
+			</data>
+			<key>requirement</key>
+			<string>cdhash H"3613ecacede40e4da7950861fa553e24895aa161" or cdhash H"780ce0f2728ce4724e475c35c99a091cafc7bc63" or cdhash H"51850e7d5ac8099a2491565c570335f453817e0c"</string>
+		</dict>
+		<key>Frameworks/libXCTestBundleInject.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			iB56LfnwyJPvcXugonaxS6Un7SU=
+			</data>
+			<key>requirement</key>
+			<string>cdhash H"881e7a2df9f0c893ef717ba0a276b14ba527ed25" or cdhash H"fe105c207561a54db5510e2e936434c8e8cc3e43" or cdhash H"b05265e5f2c3472085a6022c65851565cd6d3b07"</string>
+		</dict>
+		<key>Frameworks/libXCTestSwiftSupport.dylib</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			FjlInvxUP2DpcapGX6WIfAPgNgU=
+			</data>
+			<key>requirement</key>
+			<string>cdhash H"1639489efc543f60e971aa465fa5887c03e03605" or cdhash H"f73723fc72acbd43df9dfd12f85b1487d1554464" or cdhash H"90f30aa0a66bbf8a64f16ef37a3434a16e136e29"</string>
+		</dict>
 		<key>MacOS/DRS-Studio-AI.debug.dylib</key>
 		<dict>
 			<key>cdhash</key>
 			<data>
-			dkmo1g/W+MaJ6BUnicgUw1f7yQQ=
+			anSHgPD2GXeYJMACz+GJuA07A9I=
 			</data>
 			<key>requirement</key>
-			<string>cdhash H"7649a8d60fd6f8c689e8152789c814c357fbc904"</string>
+			<string>cdhash H"6a748780f0f619779824c002cfe189b80d3b03d2"</string>
 		</dict>
 		<key>MacOS/__preview.dylib</key>
 		<dict>
 			<key>cdhash</key>
 			<data>
-			s0+c+A8vIxYT4JENlgaUmUvAz4g=
+			IGfPTpsog2ZIWssiT+PdOLrTp7U=
 			</data>
 			<key>requirement</key>
-			<string>cdhash H"b34f9cf80f2f231613e0910d960694994bc0cf88"</string>
+			<string>cdhash H"2067cf4e9b288366485acb224fe3dd38bad3a7b5"</string>
+		</dict>
+		<key>PlugIns/DRS-Studio-AITests.xctest</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			laRcdRUBPHsf4gukXkAUCGqgkCo=
+			</data>
+			<key>requirement</key>
+			<string>cdhash H"95a45c7515013c7b1fe20ba45e4014086aa0902a"</string>
 		</dict>
 		<key>Resources/AppIcon.icns</key>
 		<dict>
@@ -48,14 +138,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			nKeCMG+CGtfgQSiv4Z50N4UHa8jbNDVSOxhjellmWNI=
+			MgBupQJd6if+9XvKbUDbd8kBg5PfdBANHEzXF8Do/PE=
 			</data>
 		</dict>
 		<key>Resources/Info.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			HDMpMyz1j6/iElT3nHV+vTiLDetrHmha2lWLmoIMNDs=
+			usQNbtotdGczpj+8KB3a1aiq/HFqFbhiUrx9pbEqzE0=
 			</data>
 		</dict>
 	</dict>

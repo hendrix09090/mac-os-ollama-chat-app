@@ -163,11 +163,12 @@ struct ChatView: View {
                             Text(model.name).tag(model as OllamaModel?)
                         }
                     }
-                    .frame(width: 200)
+                    .pickerStyle(MenuPickerStyle())
                     .padding(.horizontal, 12)
                     .padding(.vertical, 6)
                     .background(Color.white.opacity(0.2))
                     .cornerRadius(8)
+                    .fixedSize()
                     
                     // Server Settings Button
                     Button(action: { showingServerConfig.toggle() }) {
@@ -365,9 +366,9 @@ struct ChatView: View {
                 }) {
                     HStack(spacing: 4) {
                         Image(systemName: "xmark.circle.fill")
-                            .foregroundColor(.red)
+                            .foregroundColor(.white)
                         Text("Quit")
-                            .foregroundColor(.red)
+                            .foregroundColor(.black)
                     }
                 }
             }
